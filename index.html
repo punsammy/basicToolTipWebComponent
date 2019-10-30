@@ -18,22 +18,38 @@
           z-index: 10;
         }
 
+/* :host to set up default styling for custom elements  */
+        :host {
+          background: #ccc;
+        }
+/* can use :host with conditions, for example when class important is added */
+        :host(.important) {
+          background-color: red;
+        }
+
         .highlight {
           background-color:  red
         }
 /* light DOM styling overwrites styling for slotted content */
         ::slotted(.highlight){
           border-bottom: 1px dotted red;
-          background-color: red;
+        }
+
+        .icon {
+          background-color: black;
+          color: white;
+          padding: 0.15rem 0.5rem;
+          text-align: center;
+          border-radius: 50%;
         }
       </style>
 
       <slot>Default Value</slot>
-      <span>(?)</span>
+      <span class="icon">?</span>
     </template>
 
     <p>
-      <basic-tooltip text="Web Components is a set of standards">
+      <basic-tooltip class="important" text="Web Components is a set of standards">
           <span class="highlight">Web Components</span>
       </basic-tooltip>
       are awesome!

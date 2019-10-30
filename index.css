@@ -2,5 +2,9 @@ div {
   border: 2px solid orange;
 }
 .highlight {
-  background-color: #f7d28e;
+  /* background-color: #f7d28e; */
+}
+
+basic-tooltip {
+  padding: 0.15px;
 }
