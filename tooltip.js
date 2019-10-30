@@ -36,6 +36,11 @@ class Tooltip extends HTMLElement {
     return['text', 'class']; // will watch for changes in text and class
   }
 
+  // called when element is detached from DOM
+  disconnectedCallback(){
+    console.log("Disconnected");
+  }
+
 // Naming convention for functions called within a class
   _showTooltip(){
     this._tooltipContainer = document.createElement("div");
@@ -46,10 +51,6 @@ class Tooltip extends HTMLElement {
   _hideToolTip(){
     this.shadowRoot.removeChild(this._tooltipContainer);
   }
-
-  // called when element is detached from DOM
-  // disconnectedCallback(){}
-
 
 }
 
