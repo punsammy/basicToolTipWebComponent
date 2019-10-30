@@ -11,6 +11,11 @@
     <script type="text/javascript" src="./tooltip.js"></script>
   </head>
   <body>
+    <template id="tooltip-template">
+      <slot>Default Value</slot>
+      <span>(?)</span>
+    </template>
+
     <p>
       <basic-tooltip text="Web Components is a set of standards">
           Web Components
@@ -18,7 +23,7 @@
       are awesome!
     </p>
 
-    <basic-tooltip>Hover here!</basic-tooltip>
+    <basic-tooltip></basic-tooltip>
 
   </body>
 </html>
