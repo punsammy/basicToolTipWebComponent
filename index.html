@@ -12,6 +12,15 @@
   </head>
   <body>
     <template id="tooltip-template">
+      <style media="screen">
+        div {
+          background-color: black;
+          color: white;
+          position: absolute;
+          z-index: 10;
+        }
+      </style>
+
       <slot>Default Value</slot>
       <span>(?)</span>
     </template>
