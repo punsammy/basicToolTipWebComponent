@@ -1,3 +1,7 @@
+html {
+  --color-primary: #a4e6fc;
+}
+
 div {
   border: 2px solid orange;
 }
@@ -7,4 +11,8 @@ div {
 
 basic-tooltip {
   padding: 0.15px;
+}
+
+basic-tooltip.important {
+  background-color: green;
 }
