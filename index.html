@@ -12,16 +12,23 @@
     <template id="tooltip-template">
       <style media="screen">
         div {
+          font-weight: normal;
           background-color: black;
           color: white;
           position: absolute;
+          top: 1.5rem;
+          left: 0.75rem;
           z-index: 10;
+          padding: 0.15rem;
+          border-radius:  3px;
+          box-shadow:  1px 1px 6px rgba(0,0,0,0.26);
         }
 
 /* :host to set up default styling for custom elements  */
         :host {
           background: var(--color-primary);
           color: var(--color-secondary, #333538);
+          padding: 0.20rem;
         }
 /* can use :host with conditions, for example when class important is added */
         :host(.important) {
@@ -38,7 +45,7 @@
         }
 /* light DOM styling overwrites styling for slotted content */
         ::slotted(.highlight){
-          border-bottom: 1px dotted red;
+          /* border-bottom: 1px dotted red; */
         }
 
         .icon {
