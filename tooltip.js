@@ -20,6 +20,16 @@ class Tooltip extends HTMLElement {
     this.style.position = "relative";
   }
 
+  // observed attribute updates
+  attributeChangedCallback(name, oldValue, newValue){
+    console.log(name, oldValue, newValue);
+  }
+
+// accessible form outside, but not settable from outside
+  static get observedAttributes() {
+    return['text', 'class']; // will watch for changes in text and class
+  }
+
 // Naming convention for functions called within a class
   _showTooltip(){
     this._tooltipContainer = document.createElement("div");
@@ -34,8 +44,7 @@ class Tooltip extends HTMLElement {
   // called when element is detached from DOM
   // disconnectedCallback(){}
 
-  // observed attribute updated
-  // attributeChangedCallback(){}
+
 }
 
 
